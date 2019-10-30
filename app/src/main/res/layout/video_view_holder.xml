@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_margin="10dp"
+        android:background="#E4E1E1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    <ImageView
+            android:id="@+id/media_content"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"/>
+    <TextView
+            android:id="@+id/media_title"
+            android:text="Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintBottom_toTopOf="@+id/media_owner"
+            app:layout_constraintTop_toBottomOf="@+id/media_content"
+            app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+            android:id="@+id/media_owner"
+            android:text="Center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/media_title"
+            app:layout_constraintBottom_toTopOf="@+id/media_description"
+            app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+            android:id="@+id/media_date_created"
+            android:text="2017-03-07T00:00:00Z"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/media_owner"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toTopOf="@+id/media_owner"/>
+    <TextView
+            android:id="@+id/media_description"
+            android:text="Description -- Description -- Description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/media_owner"
+            app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+            android:id="@+id/media_keywords"
+            android:text="[ keywords, keywords, ... ]"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/media_description"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

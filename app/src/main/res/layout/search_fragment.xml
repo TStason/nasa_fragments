@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+                android:layout_height="match_parent" android:id="@+id/relative" android:background="#FFFFFF">
+    <EditText
+            android:id="@+id/search_edit"
+            android:hint="Search..."
+            android:layout_width="277dp"
+            android:layout_height="wrap_content" android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp" android:layout_marginTop="30dp" android:layout_alignParentTop="true"/>
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp" android:layout_alignParentStart="true" android:layout_marginStart="0dp"
+            android:layout_alignParentEnd="true" android:layout_marginEnd="0dp" android:id="@+id/recycler"
+            android:layout_marginTop="10dp" android:layout_below="@+id/search_edit"/>
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@android:drawable/ic_search_category_default"
+            android:id="@+id/search_btn" android:layout_toEndOf="@+id/search_edit"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="0dp" android:layout_alignTop="@+id/search_edit"
+            android:background="@drawable/layers_list"
+            android:layout_marginBottom="0dp" android:layout_alignBottom="@+id/search_edit"/>
+    <com.example.nasa_api.utils.CustomPB
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/custom_pb"/>
+</RelativeLayout>
